@@ -99,6 +99,23 @@ select option { background:#0b0f16; }
 .egg-status.ok { color:var(--green); }
 .egg-status.err { color:var(--red); }
 .egg-status.blank { color:transparent; }
+.egg-status.expired-tempting {
+    color: #ff9500;
+    background-color: #fff4e0;
+    border: 1px solid #ffc080;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.73rem;
+    text-align: center;
+}
+
+/* 禁用状态美化 */
+.egg-input-row input:disabled {
+    background-color: #1a212f;
+    color: #778899;
+    cursor: not-allowed;
+    border-color: #334155;
+}
 .logo-footer { border-top:1px solid var(--border); padding:1rem 2rem; background:var(--s1); display:flex; justify-content:center; align-items:center; gap:.9rem; }
 .logo-by, .logo-provide { font-family:var(--mono); font-size:.72rem; color:var(--muted); letter-spacing:2px; white-space:nowrap; }
 .sentryai-wordmark { display:inline-flex; align-items:flex-end; gap:0; position:relative; padding-bottom:3px; }
@@ -130,10 +147,15 @@ select option { background:#0b0f16; }
     <div class="col-quote">
       <!-- ... 报价部分保持不变 ... -->
 
-      <div class="egg-box">
+            <div class="egg-box">
         <div class="egg-lbl">🏷 Coupon <em>— Next Drop Coming Soon</em></div>
         <div class="egg-input-row">
-          <input type="text" id="eggInput" placeholder="Enter code..." autocomplete="off" spellcheck="false">
+          <input type="text" 
+                 id="eggInput" 
+                 placeholder="Enter code..." 
+                 autocomplete="off" 
+                 spellcheck="false"
+                 disabled>
         </div>
         <div class="egg-status blank" id="eggStatus">　</div>
       </div>
@@ -156,15 +178,19 @@ const PRICES = `...`;   // （你的价格数据保持不变）
 const P = {}, PC = {};
 // ...（中间所有原有代码不变）...
 
-// ==================== 新增：Coupon 点击提示 ====================
+// ==================== Coupon 提示逻辑（完全不可输入）================
 const eggInput = document.getElementById('eggInput');
 
 eggInput.addEventListener('focus', function() {
-    this.placeholder = "This offer has expired 🔥 Next round has even better deals!";
+    this.placeholder = "This promotion has ended 🔥 Next round has even better deals!";
+    $('eggStatus').textContent = "Don’t miss the next exclusive offer — bigger savings coming soon!";
+    $('eggStatus').className = 'egg-status expired-tempting';
 });
 
 eggInput.addEventListener('blur', function() {
     this.placeholder = "Enter code...";
+    // $('eggStatus').textContent = '　';        // 想保留提示就注释这行
+    // $('eggStatus').className = 'egg-status blank';
 });
 
 // ==================== 原有 Coupon 验证逻辑（保持有效）================
