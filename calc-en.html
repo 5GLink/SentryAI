@@ -272,9 +272,10 @@ select option { background:#0b0f16; }
       </div>
 
       <div class="egg-box">
-        <div class="egg-lbl">🏷 Coupon</div>
+        <div class="egg-lbl">🏷 Coupon <em>— Get 10% off on devices</em></div>
         <div class="egg-input-row">
-          <input type="text" id="eggInput" placeholder="Next drop — don't miss it 👀" autocomplete="off" spellcheck="false" disabled style="opacity:.45;cursor:not-allowed;">
+          <input type="text" id="eggInput" placeholder="Enter code..." autocomplete="off" spellcheck="false"
+             onfocus="this.placeholder='Next drop — don\'t miss it 👀'; this.blur();">
         </div>
         <div class="egg-status blank" id="eggStatus">　</div>
       </div>
