@@ -1,0 +1,45 @@
+category,key,label,price,unit,note
+# 摄像头单价 (IP PoE)
+camera_ip,ip_2mp,IP 2MP 1080P,$75,per_cam,经济型子弹/半球
+camera_ip,ip_4mp,IP 4MP 1440P,$105,per_cam,主流高清推荐
+camera_ip,ip_8mp,IP 8MP 4K,$165,per_cam,超高清
+
+# 摄像头单价 (同轴 HD-TVI/CVI)
+camera_coax,coax_2mp,同轴 2MP 1080P,$60,per_cam,传统布线
+camera_coax,coax_4mp,同轴 4MP 1440P,$85,per_cam,传统布线
+camera_coax,coax_8mp,同轴 8MP 4K,$130,per_cam,传统布线
+
+# 录像机 NVR (IP系统)
+recorder_nvr,nvr_8ch,NVR 8通道,$165,each,IP PoE
+recorder_nvr,nvr_16ch,NVR 16通道,$265,each,IP PoE
+recorder_nvr,nvr_32ch,NVR 32通道,$420,each,IP PoE
+
+# 录像机 DVR (同轴系统)
+recorder_dvr,dvr_8ch,DVR 8通道,$140,each,HD-TVI/CVI
+recorder_dvr,dvr_16ch,DVR 16通道,$230,each,HD-TVI/CVI
+
+# 硬盘 (Micro Center 监控级实价 2026)
+hdd,hdd_1t,1TB WD Purple / Seagate SkyHawk,$109,each,Micro Center实价
+hdd,hdd_2t,2TB WD Purple / Seagate SkyHawk,$129,each,Micro Center实价
+hdd,hdd_4t,4TB WD Purple / Seagate SkyHawk,$99,each,Micro Center实价 (促销)
+hdd,hdd_6t,6TB Seagate SkyHawk,$149,each,Micro Center实价
+hdd,hdd_8t,8TB WD Purple / Seagate SkyHawk,$199,each,Micro Center参考
+hdd,hdd_no,无硬盘,$0,each,客户自备
+
+# 线材 (每路摄像头)
+cable,cat6_per_cam,Cat6网线套件 (IP系统 每路),$38,per_cam,含100ft Cat6+接头+防水盒+扎带
+cable,coax_per_cam,同轴Siamese套件 (每路),$32,per_cam,含100ft RG59+接头+配件
+cable,self_supply_aux,自备材料辅料 (每路),$10,per_cam,仅接头/扎带/胶带
+
+# 附加服务
+addon,poe_switch,PoE交换机/中继,$95,each,IP系统推荐
+addon,remote_setup,远程访问+APP调试,$135,each,含手机端配置
+addon,warranty_ext,延长整机保修至3年,$165,each,
+
+# 人工费
+labor,labor_per_cam,人工安装费 (每路),$135,per_cam,含安装+调试+收线
+
+# 区域附加费
+surcharge,bridge_daily,过桥费 (Bronx/Staten Island 每天),$25,per_day,每天$25封顶$75
+surcharge,bridge_cap,过桥费封顶,$75,cap,
+surcharge,manhattan_flat,曼哈顿拥堵+停车费,$120,flat,每项目固定收取

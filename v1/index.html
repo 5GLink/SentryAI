@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentryAI - 智能监控报价</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SentryAI 智能监控系统</h1>
+        <h2>纽约参考估价</h2>
+        
+        <div class="system-box">
+            <h3>第一套系统配置</h3>
+            <div class="form-group">
+                <label>摄像头类型：</label>
+                <select id="type1">
+                    <option value="ipc" selected>网络数字 (IPC)</option>
+                    <option value="coax">同轴模拟 (Coax)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>摄像头数量：</label>
+                <input type="number" id="cameras1" value="8" min="1">
+            </div>
+            <div class="form-group">
+                <label>分辨率：</label>
+                <select id="res1">
+                    <option value="1080p">1080P (入门)</option>
+                    <option value="4mp" selected>4MP (主流高清)</option>
+                    <option value="5mp">5MP (超清)</option>
+                    <option value="4k">4K (极清)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>线材长度 (ft)：</label>
+                <input type="number" id="cable1" value="800" min="0">
+            </div>
+            <div class="form-group">
+                <label>录像存储天数：</label>
+                <select id="days1">
+                    <option value="7">7 天</option>
+                    <option value="15">15 天</option>
+                    <option value="30" selected>30 天</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="secondSystem" onchange="toggleSecondSystem()"> 增加第二套独立系统
+            </label>
+        </div>
+
+        <div id="second-system-config" class="system-box" style="display:none;">
+            <h3>第二套系统配置</h3>
+            <div class="form-group">
+                <label>摄像头类型：</label>
+                <select id="type2">
+                    <option value="ipc" selected>网络数字 (IPC)</option>
+                    <option value="coax">同轴模拟 (Coax)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>摄像头数量：</label>
+                <input type="number" id="cameras2" value="4" min="1">
+            </div>
+            <div class="form-group">
+                <label>分辨率：</label>
+                <select id="res2">
+                    <option value="1080p">1080P (入门)</option>
+                    <option value="4mp" selected>4MP (主流高清)</option>
+                    <option value="5mp">5MP (超清)</option>
+                    <option value="4k">4K (极清)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>线材长度 (ft)：</label>
+                <input type="number" id="cable2" value="400" min="0">
+            </div>
+            <div class="form-group">
+                <label>录像存储天数：</label>
+                <select id="days2">
+                    <option value="7">7 天</option>
+                    <option value="15">15 天</option>
+                    <option value="30" selected>30 天</option>
+                </select>
+            </div>
+        </div>
+        
+        <button onclick="calculatePrice()">生成详细报价清单</button>
+        
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

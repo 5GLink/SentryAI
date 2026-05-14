@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    padding: 20px;
+    color: #334155;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+h1 {
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #64748b;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.system-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #1e40af;
+}
+
+.checkbox-group {
+    padding: 12px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #f1f5f9;
+    border-radius: 10px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 6px 0;
+}
+
+.sys-total {
+    text-align: right;
+    font-weight: bold;
+    color: #1e40af;
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+}
+
+.grand-total {
+    border-top: 2px solid #1e40af;
+    padding-top: 15px;
+    font-size: 24px;
+    color: #1e40af;
+    font-weight: bold;
+    text-align: right;
+}
