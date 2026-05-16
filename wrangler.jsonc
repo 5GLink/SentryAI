@@ -1,12 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "sentryai",
+  "name": "camquote",
   "compatibility_date": "2026-05-14",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": "./pro"
   },
   "compatibility_flags": [
     "nodejs_compat"
